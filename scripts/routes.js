@@ -4,7 +4,9 @@ config(['$stateProvider', '$urlRouterProvider',
         $urlRouterProvider.otherwise('home');
         $stateProvider.state('home', {
             url: '/home',
-            templateUrl: './modules/login/views/landingPage.html'
+            templateUrl: 'modules/login/views/landingPage.html',
+            controller: 'LoginCtrl'
+
         });
     }
 ]);
