@@ -1,12 +1,11 @@
-angular.module('Collateral360', ['ui.router']).
+angular.module('collateral360').
 config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('home');
-        $stateProvider.state('home', {
-            url: '/home',
+        $urlRouterProvider.otherwise('/');
+        $stateProvider.state('/', {
+            url: '/',
             templateUrl: 'modules/login/views/landingPage.html',
-            controller: 'LoginCtrl'
-
-        });
+            controller : 'landingPageCtrl'
+        })
     }
 ]);
